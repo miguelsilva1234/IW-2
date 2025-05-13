@@ -5,17 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 14</title>
     <script>
-        function mouseEmCima(imagem){
-            imagem.src = "figura01.jpg";
+        //function mouseEmCima(imagem){
+        //    imagem.src = "figura1.jpg";
+        //}
+        //function mouseFora(imagem){
+        //    imagem.src = "figura2.jpg";
+        //}
+
+        function trocarImagem(imagem) {
+        if (imagem.src.includes("figura1.jpg")) {
+            imagem.src = "figura2.jpg";
+        } else {
+            imagem.src = "figura1.jpg";
         }
-        function mouseFora(imagem){
-            imagem.src = "figura02.jpg";
-        }
+    }
     </script>
 </head>
 <body>
     Passe o mouse sobre a imagem: <br><br>
-    <img src="figura02.jpg" onclick="mouseEmCima(this)" width="300" height="300"><br><br>
+    <img src="figura1.jpg" onclick="trocarImagem(this)" width="300" height="300"><br><br>
     1) Agora padronize os tamanhos das imagens<br><br>
     2) Mude o evento para que as imagens sejam trocadas ao clicar com o mouse.
 
