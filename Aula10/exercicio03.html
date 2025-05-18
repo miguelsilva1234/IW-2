@@ -6,19 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="texto">
+    <input type="text" id="texto" placeholder="Digite algo...">
     <button onclick="mostrar()">COMFIRMAR</button>
 
     <script>
-        var texto = document.getElementById('texto')
+        var texto = document.getElementById('texto');
+        var ultimoValor = "";
+        var valorJaMostrado = false;
 
-        function mostrar(){
-            alert("valor = " + texto.value)
-            if (texto.value == getElementById('text')) {
-                
+        texto.addEventListener("input", function () {
+            valorJaMostrado = false;
+        });
+
+        function mostrar() {
+            if (!valorJaMostrado) {
+                alert("Você digitou = " + texto.value);
+                ultimoValor = texto.value;
+                valorJaMostrado = true;
             }
         }
-
     </script>
 </body>
 </html>
